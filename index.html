@@ -11,26 +11,24 @@
 
 <body>
 <div class="wrapper">
-  <header class="main-header">
-    <nav class="main-navigation">
-      <a class="main-heder-logo">
-        <img src="img/" width="137" height="70" alt="Логотип">
-        <!--todo дописать путь к картинке-логотипу. Уточнить нужна ли вообще тут ссылка <a>??? -->
-      </a>
-      <div class="container">
-        <ul class="site-navigation">
-          <li><a href="info.html">информация</a></li>
-          <li><a href="media.html">фото и видео</a></li>
-          <li><a href="maps-state.html">карта штата</a></li>
-          <li><a href="hotels.html">гостиницы</a></li>
-        </ul>
-      </div>
+  <header class="header">
+    <!--todo вставить верхний логотип-уголок при помощи CSS-->
+    <nav class="navigation">
+      <ul>
+        <li><a href="info.html">информация</a></li>
+        <li><a href="media.html">фото и видео</a></li>
+        <li><a class="header-logo" href="index.html"></a><li>
+        <li><a href="maps-state.html">карта штата</a></li>
+        <li><a href="hotels.html">гостиницы</a></li>
+      </ul>
     </nav>
   </header>
 
   <main class="container">
     <div class="main-billboard">
       <h1 class="visually-hidden">Добро пожаловать в великолепную Седона</h1>
+      <img src="img/main-banner.jpg" width="1200" height="510" alt="Седона">
+      <!--todo Наложить надписи group-inscriptions.png-->
     </div>
 
     <section class="reasons">
@@ -38,13 +36,15 @@
       <p>Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
       <ul class="reasons-list">
         <li class="reasons-item">
-          <!--todo порядковый номер при помощи CSS??? Нет -- пишем в HTML-->
+          <!--todo порядковый номер при помощи CSS???Нет в HTML-->
           <h3>Настоящий городок</h3>
+          <img src="img/small-town.jpg" width="800" height="256" alt="Маленький городок">
           <p>Седона не атракцион для туристов, там течет своя жизнь</p>
         </li>
         <li class="reasons-item">
           <!--todo переносы строк делать при помощи width для h3, без <br>-->
           <h3>Там есть мост дьявола</h3>
+          <img src="img/devil's-bridge.jpg" width="800" height="256" alt="Мост дъявола">
           <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
         </li>
         <li class="reasons-item">
@@ -88,19 +88,29 @@
     </section>
 
     <section class="map">
+      <h3 class="visually-hidden">Карта Google</h3>
       <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52385.18050593549!2d-111.83015777270994!3d34.854373381096664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1527924351286"
-              width="600" height="450" frameborder="0" style="border:0" allowfullscreen>
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d838162.8369633064!2d-111.79513845!3d34.854378399999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2sSedona%2C+AZ%2C+USA!5e0!3m2!1sen!2sru!4v1435000602855"
+          allowfullscreen="" width="1200" height="593">
       </iframe>
       <!--todo Атрибут frameborder элемента iframe устарел. Вместо этого используйте CSS-->
     </section>
   </main>
 
-  <footer>
-    <!--todo Здесь будет "подвал" :)-->
+  <footer class="main-footer">
+    <span class="main-footer-logo">#visitsedona</span>
+    <ul class="footer-social">
+      <li><a class="social-button social-button-vk" href="#">Вконтакте</a></li>
+      <li><a class="social-button social-button-fb" href="#">Фейсбук</a></li>
+      <li><a class="social-button social-button-in" href="#">Инстаграм</a></li>
+    </ul>
+    <div class="main-footer-copyright">
+      <span>website by</span>
+      <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
+      <!--todo логотип академии подключить-->
+    </div>
   </footer>
-
 </div>
-<!--todo Подключить скрипты...-->
+<!--todo подключать скрипты JS-->
 </body>
 </html>
