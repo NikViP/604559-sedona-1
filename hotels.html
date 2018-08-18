@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона (Николай Пушкарев)</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -13,13 +14,12 @@
   <header class="header">
     <!--todo вставить верхний логотип-уголок при помощи CSS-->
     <nav class="navigation">
-      <ul>
-        <li><a href="info.html">информация</a></li>
-        <li><a href="media.html">фото и видео</a></li>
-        <li><a class="header-logo" href="index.html"></a>
-        <li>
-        <li><a href="maps-state.html">карта штата</a></li>
-        <li><a href="hotels.html">гостиницы</a></li>
+      <ul class="navigation-list">
+        <li><a class="navigation-link" href="info.html">информация</a></li>
+        <li><a class="navigation-link" href="media.html">фото и видео</a></li>
+        <li><a class="header-logo" href="index.html"></a></li>
+        <li><a class="navigation-link" href="maps-state.html">карта штата</a></li>
+        <li><a class="navigation-link" href="hotels.html">гостиницы</a></li>
       </ul>
     </nav>
   </header>
@@ -33,11 +33,11 @@
         <!--todo ссылки в форме пока нет-->
         <fieldset class="infrastructure">
           <legend>инфраструктура:</legend>
-          <ul>
+          <ul class="filter-list">
             <li class="filter-option">
               <input class="visually-hidden filter-input-checkbox" type="checkbox" name="pool" checked>
               бассейн
-              <!--todo В Баребершопе (скринкаст) для input дописан класс filter-input разобраться зачем-->
+              <!--todo В Барбершопе (скринкаст) для input дописан класс filter-input разобраться зачем-->
             </li>
             <li class="filter-option">
               <input class="visually-hidden filter-input-checkbox" type="checkbox" name="parking">
@@ -51,7 +51,7 @@
         </fieldset>
         <fieldset class="housing">
           <legend>тип жилья:</legend>
-          <ul>
+          <ul class="filter-list">
             <li class="filter-option">
               <input class="visually-hidden filter-input-checkbox" type="checkbox" name="hotel" checked>
               гостиница
@@ -76,13 +76,12 @@
 
     <section class="filters-result">
       <h2 class="visually-hidden">Результат выбора отеля</h2>
-      <h3 class="sort">найдено:</h3>
-      <input name="found" type="text" value="3">
+      <h3 class="found">найдено: 3</h3>
       <h3 class="sort">сортировка:</h3>
       <ul class="sort-list">
-        <li class="sort-item-price"><a href="#price">по цене</a></li>
-        <li class="sort-item-type"><a href="#type">по типу</a></li>
-        <li class="sort-item-rating"><a href="#rating">по рейтингу</a></li>
+        <li><a class="sort-link" href="#price">по цене</a></li>
+        <li><a class="sort-link" href="#type">по типу</a></li>
+        <li><a class="sort-link" href="#rating">по рейтингу</a></li>
       </ul>
       <!--todo стрелки-треугольники сделать при помощи псевдоэлементов-->
       <ul class="result-list">
@@ -95,7 +94,7 @@
       <ul class="result-list">
         <li class="result-item">
           <h3>
-            <a href="hotel-Amara_Resort.html">Amara Resort & Spa</a>
+            <a class="hotels-name" href="hotel-Amara_Resort.html">Amara Resort & Spa</a>
           </h3>
           <a href="hotel-Amara_Resort.html">
             <img src="img/hotel-Amara_Resort.jpg" width="135" height="90" alt="отель Amara Resort & Spa">
@@ -113,7 +112,7 @@
         </li>
         <li class="result-item">
           <h3>
-            <a href="hotel-Desert_Quail_Inn.html">Desert Quail Inn</a>
+            <a class="hotels-name" href="hotel-Desert_Quail_Inn.html">Desert Quail Inn</a>
           </h3>
           <a href="hotel-Desert_Quail_Inn.html">
             <img src="img/hotel-Desert_Quail_Inn.jpg" width="135" height="90" alt="отель Desert Quail Inn">
@@ -131,7 +130,7 @@
         </li>
         <li class="result-item">
           <h3>
-            <a href="hotel-Villas_at_Poco_Diablo.html">Villas at Poco Diablo</a>
+            <a class="hotels-name" href="hotel-Villas_at_Poco_Diablo.html">Villas at Poco Diablo</a>
           </h3>
           <a href="hotel-Villas_at_Poco_Diablo.html">
             <img src="img/hotel-Villas_at_Poco_Diablo.jpg" width="135" height="90" alt="отель Villas at Poco Diablo">
