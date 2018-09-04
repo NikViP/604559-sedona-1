@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  min-width: 1280px;
+  min-width: 1200px;
   font-family: "PT Sans", Arial sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -19,7 +19,7 @@ body {
 
 *:focus {
   outline: none;
-  box-shadow: 0 0 3px 3px rgba(129, 179, 210, 0.8);
+  border-bottom: 1px dotted rgba(129, 179, 210, 0.8);
 }
 
 .visually-hidden {
@@ -87,11 +87,12 @@ body {
   position: relative;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
   margin: 0;
   padding: 0;
-  min-height: 56px;
   height: 56px; /*для центрирования в IE по вертикали*/
+  min-height: 56px;
   list-style: none;
 }
 
@@ -636,13 +637,13 @@ input[type="checkbox"] + .form-label:before {
   left: 0;
   width: 23px;
   height: 23px;
-  background-image: url("../img/checkbox-off.png");
+  background-image: url("../img/checkbox-off.svg");
 }
 
 input[type="checkbox"]:checked + .form-label:before {
   width: 27px;
   height: 23px;
-  background-image: url("../img/checkbox-on.png");
+  background-image: url("../img/checkbox-on.svg");
 }
 
 input[type="checkbox"]:disabled + .form-label:after {
@@ -654,13 +655,13 @@ input[type="checkbox"]:disabled + .form-label:after {
   left: 0;
   width: 23px;
   height: 23px;
-  background-image: url("../img/checkbox-off-disabled.png");
+  background-image: url("../img/checkbox-off-disabled.svg");
 }
 
 input[type="checkbox"]:checked + .form-label:after {
   width: 27px;
   height: 23px;
-  background-image: url("../img/checkbox-on-disabled.png");
+  background-image: url("../img/checkbox-on-disabled.svg");
 }
 
 input[type="checkbox"]:focus + .form-label {
